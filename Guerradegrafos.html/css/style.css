@@ -1,0 +1,312 @@
+:root {
+    --player-color: #4CAF50;
+    --ia-color: #F44336;
+    --neutral-color: #757575;
+    --edge-color: #546E7A;
+    --background: #121212;
+    --panel-bg: #1E1E1E;
+    --text-dark: #E0E0E0;
+    --text-light: #FFFFFF;
+    --card-bg: #2D2D2D;
+    --border-color: #424242;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.game-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--panel-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h1 {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.stat-box {
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    width: 30%;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.player {
+    border-left: 5px solid var(--player-color);
+}
+
+.ia {
+    border-left: 5px solid var(--ia-color);
+}
+
+.turn-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#graph-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+#edges-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.graph-edge {
+    stroke: var(--edge-color);
+    stroke-width: 3;
+}
+
+#nodes-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.territory {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    border: 3px solid transparent;
+}
+
+.territory:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.territory.neutral {
+    background-color: var(--neutral-color);
+    color: white;
+}
+
+.territory.player {
+    background-color: var(--player-color);
+    color: white;
+}
+
+.territory.ia {
+    background-color: var(--ia-color);
+    color: white;
+}
+
+.territory.selected {
+    border: 3px solid #FFC107;
+    box-shadow: 0 0 15px #FFC107;
+}
+
+.territory .name {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.territory .armies {
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.control-panel {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#message-box {
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #0D47A1;
+    border-left: 4px solid #2196F3;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    min-height: 60px;
+}
+
+.battle-log {
+    max-height: 120px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.battle-log p {
+    margin: 5px 0;
+    padding: 3px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    min-width: 120px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.reinforce {
+    background-color: var(--player-color);
+    color: white;
+}
+
+.attack {
+    background-color: var(--ia-color);
+    color: white;
+}
+
+.fortify {
+    background-color: #FF9800;
+    color: white;
+}
+
+.end-turn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.dice {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0 2px;
+    font-size: 12px;
+}
+
+.player-dice {
+    background-color: var(--player-color);
+    color: white;
+}
+
+.ia-dice {
+    background-color: var(--ia-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .game-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stat-box, .turn-info {
+        width: 100%;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .territory {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .territory .name {
+        font-size: 10px;
+    }
+    
+    .territory .armies {
+        font-size: 14px;
+    }
+}

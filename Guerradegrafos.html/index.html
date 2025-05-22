@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerra de Grafos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Guerra de Grafos</h1>
+            <div class="game-stats">
+                <div class="stat-box player">
+                    <span>Jogador</span>
+                    <span id="player-territories">0</span> territórios
+                    <span id="player-armies">0</span> tropas
+                </div>
+                <div class="turn-info">
+                    <span>Turno <span id="current-turn">1</span></span>
+                    <span id="current-phase">Fase: Reforço</span>
+                </div>
+                <div class="stat-box ia">
+                    <span>IA</span>
+                    <span id="ia-territories">0</span> territórios
+                    <span id="ia-armies">0</span> tropas
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="graph-container">
+                <svg id="edges-layer" width="100%" height="100%"></svg>
+                <div id="nodes-layer"></div>
+            </div>
+
+            <div class="control-panel">
+                <div id="message-box">Selecione um território para começar</div>
+                <div id="battle-log" class="battle-log"></div>
+                <div class="action-buttons">
+                    <button id="reinforce-btn" class="btn reinforce">Reforçar (+<span id="reinforce-count">3</span>)</button>
+                    <button id="attack-btn" class="btn attack">Atacar</button>
+                    <button id="fortify-btn" class="btn fortify">Fortificar</button>
+                    <button id="end-turn-btn" class="btn end-turn">Terminar Turno</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/core/GameClass.js"></script>
+    <script src="js/core/GameSetup.js"></script>
+    <script src="js/core/GameUI.js"></script>
+    <script src="js/core/GameActions.js"></script>
+    <script src="js/core/GameAI.js"></script>
+    <script src="js/core/GameRules.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
