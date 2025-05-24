@@ -1,58 +1,126 @@
-# Guerra de Grafos
+# 🎮 Guerra de Grafos
 
-Guerra de Grafos é um jogo de estratégia simples baseado em turnos, inspirado no Risk, jogado em um grafo de territórios. O jogador compete contra uma IA para conquistar todos os territórios no mapa.
+Um jogo de estratégia baseado em grafos onde o objetivo é conquistar todos os territórios do mapa enfrentando uma inteligência artificial (IA). Desenvolvido como um projeto educativo e visualmente atrativo, o jogo combina conceitos de algoritmos de grafos com fases de reforço, ataque e fortificação.
 
-## Como Jogar
+---
 
-1.  **Abrir o Jogo**:
-    *   Baixe ou clone este repositório.
-    *   Navegue até a pasta `GraphWarGame`.
-    *   Abra o arquivo `index.html` em um navegador moderno (ex: Chrome, Firefox, Edge).
+## 📌 O que o projeto faz
 
-2.  **Objetivo do Jogo**:
-    *   Conquistar todos os territórios no mapa, eliminando os exércitos da IA e capturando seus territórios. A IA tem o mesmo objetivo.
+O **Guerra de Grafos** simula um jogo de guerra por territórios em que o jogador humano enfrenta a IA em turnos. A cada turno, os jogadores recebem reforços, atacam territórios inimigos e movimentam tropas. A lógica do jogo é baseada em estruturas de grafos, com territórios representando nós e conexões como arestas.
 
-3.  **Iniciando o Jogo**:
-    *   O jogo começa com o jogador e a IA controlando, cada um, um território com 5 exércitos. Os territórios restantes são neutros, com 1 exército.
+---
 
-4.  **Turno do Jogador**:
-    O turno do jogador consiste em três fases:
+## 🛠️ Tecnologias utilizadas
 
-    *   **Fase de Reforço**:
-        *   Você recebe um número de exércitos de reforço com base no número de territórios que controla (mínimo de 3).
-        *   Clique em um dos seus territórios para selecioná-lo.
-        *   Clique no botão "Reforçar" para posicionar um exército no território selecionado.
-        *   Repita até que todos os reforços sejam posicionados.
-        *   O jogo avança automaticamente para a fase de Ataque assim que todos os reforços forem usados. Você também pode clicar em "Atacar" para ir para a fase de ataque mais cedo (os reforços restantes serão perdidos).
+- **HTML5** – Estrutura da interface do jogo  
+- **CSS3** – Estilização e layout responsivo  
+- **JavaScript (Vanilla)** – Lógica do jogo, IA, regras e controle de turno  
+- **SVG** – Renderização das conexões (arestas) entre os territórios  
+- **Vídeo e imagens** – Para ambientação visual e regras  
 
-    *   **Fase de Ataque**:
-        *   Para atacar, primeiro clique em um dos seus territórios que tenha mais de 1 exército (este é o território atacante).
-        *   Em seguida, clique em um território inimigo adjacente (IA ou neutro) para iniciar um ataque.
-        *   **Atacando Territórios Neutros**: Você conquista automaticamente territórios neutros, movendo uma parte dos seus exércitos do território atacante.
-        *   **Atacando Territórios da IA**:
-            *   Uma batalha ocorre, decidida por rolagem de dados.
-            *   O atacante rola até 3 dados (deve deixar 1 exército para trás).
-            *   O defensor rola até 2 dados.
-            *   Os dados mais altos são comparados. O atacante vence se o seu dado for estritamente maior.
-            *   Exércitos são perdidos com base nos resultados da rolagem de dados.
-            *   Se o defensor perder todos os exércitos, o atacante captura o território e move um número de exércitos.
-        *   Você pode atacar várias vezes de diferentes territórios.
-        *   Clique no botão "Fortificar" para ir para a fase de Fortificação.
+---
 
-    *   **Fase de Fortificação**:
-        *   Você pode mover exércitos de um dos seus territórios para um território aliado adjacente.
-        *   Clique em um território com mais de 1 exército (origem).
-        *   Clique em um território aliado adjacente (destino).
-        *   Você será solicitado a informar o número de exércitos a mover (garantindo que pelo menos 1 permaneça).
-        *   Você só pode realizar um movimento de fortificação por turno por padrão (a lógica pode ser ajustada).
+## 💡 Por que foi construído
 
-5.  **Terminando Seu Turno**:
-    *   Clique no botão "Terminar Turno" para finalizar seu turno.
+O **Guerra de Grafos** foi desenvolvido com fins educacionais e experimentais, com o objetivo de unir teoria e prática em um projeto interativo. A ideia principal foi aplicar conceitos de algoritmos e estruturas de dados, especialmente a **Teoria dos Grafos**, em um ambiente visual e dinâmico.
 
-6.  **Turno da IA**:
-    *   A IA realizará suas fases de reforço, ataque e fortificação. Suas ações serão registradas no log de batalha.
+Este projeto busca:
 
-7.  **Vencendo/Perdendo**:
-    *   O jogo termina quando um jogador (você ou a IA) controla todos os territórios no mapa.
+- Explorar a **aplicação prática da Teoria dos Grafos** no contexto de jogos digitais.
+- Exercitar a **lógica de turnos** e a criação de uma **IA simples**, capaz de tomar decisões estratégicas.
+- Desenvolver uma interface web **interativa, visualmente atrativa e responsiva**, utilizando apenas HTML, CSS e JavaScript puro (sem frameworks).
+- Integrar de forma eficiente a **lógica de programação com elementos gráficos e de jogabilidade**, promovendo uma experiência fluida e educativa.
 
-## Estrutura do Projeto
+O projeto também serve como uma base sólida para quem deseja entender como construir um jogo de estratégia a partir do zero, com foco em estruturação de código, organização de fases do jogo e tomada de decisões automatizadas.
+
+---
+
+## 📋 Pré-requisitos
+
+- 💻 **Sistema operacional:** Windows, macOS, Linux ou outro com suporte a navegador moderno  
+- 🌐 **Navegador web:**  
+  - ✅ Google Chrome (recomendado)  
+  - ✅ Firefox  
+  - ✅ Microsoft Edge  
+  - ✅ Safari  
+- 📁 **Nenhuma instalação necessária.** Basta abrir o arquivo `index.html` com um navegador moderno.
+
+---
+
+# 🧭 Instruções de instalação
+
+##Siga os passos abaixo para instalar e executar o jogo Guerra de Grafos no seu computador:
+
+🔽 1. Faça o download ou clone o repositório
+Você pode escolher entre duas opções:
+
+Opção A – Download ZIP
+
+Acesse o repositório no GitHub.
+
+Clique no botão verde "Code" e selecione "Download ZIP".
+
+Extraia o conteúdo do arquivo .zip para uma pasta local no seu computador.
+
+Opção B – Clonar com Git
+Se você tiver o Git instalado, abra o terminal ou prompt de comando e digite:
+
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/guerra-de-grafos.git
+Isso criará uma cópia do projeto na pasta guerra-de-grafos.
+
+📁 2. Acesse a pasta do projeto
+No seu gerenciador de arquivos, abra a pasta onde os arquivos foram extraídos ou clonados.
+
+🌐 3. Execute o jogo
+Localize o arquivo chamado index.html.
+
+Clique duas vezes sobre ele para abrir no seu navegador padrão (Chrome, Firefox, Edge etc.).
+
+✅ Pronto! O jogo será carregado automaticamente, sem necessidade de instalação adicional.
+
+# Jogabilidade
+
+🧩 Como o jogo funciona
+O jogo é dividido em turnos alternados entre o jogador e a IA. Cada turno é composto por 3 fases:
+
+🔶 1. Fase de Reforço
+Você recebe tropas extras com base na quantidade de territórios controlados (mínimo de 3 por turno).
+
+Essas tropas podem ser distribuídas clicando nos seus territórios diretamente no mapa.
+
+Use o botão "Reforçar" para adicionar tropas ao território selecionado.
+
+🔺 2. Fase de Ataque
+Clique em um território seu com mais de 1 tropa.
+
+Depois, clique em um território inimigo vizinho para atacar.
+
+O resultado do combate é calculado automaticamente.
+
+🛡️ 3. Fase de Fortificação
+Movimente tropas entre dois territórios seus conectados.
+
+Fortifique regiões estratégicas ou prepare futuros ataques.
+
+✅ Terminar Turno
+Clique em "Terminar Turno" para passar a vez à IA.
+
+A IA executará suas ações automaticamente.
+
+🧠 Como vencer
+Você vence ao conquistar todos os territórios.
+
+Você perde se a IA dominar todos os seus territórios.
+
+🖱️ Interface e Controles
+Clique nos territórios para selecionar ações.
+
+Use os botões do painel lateral para executar comandos.
+
+Veja as regras clicando em "Regras".
+
+Acompanhe as jogadas no registro de batalha.
+
