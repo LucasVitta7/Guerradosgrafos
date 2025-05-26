@@ -135,7 +135,7 @@ Acompanhe as jogadas no registro de batalha.
 
 | Nome | GitHub |
 |------|--------|
-|Gustavo Juliano Silva dos Santos| [@fulano](https://github.com/fulano) |
+|Gustavo Juliano Silva dos Santos| https://github.com/G-juliano95 |
 |Eduardo Wenzel Martins de Almeida| [@ciclano](https://github.com/ciclano) |
 | Lucas Mickael da Silva Vitta| [@ciclano](https://github.com/ciclano) |
 
