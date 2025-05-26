@@ -1,12 +1,20 @@
 # 🎮 Guerra de Grafos
+Resumo
 
-Um jogo de estratégia baseado em grafos onde o objetivo é conquistar todos os territórios do mapa enfrentando uma inteligência artificial (IA). Desenvolvido como um projeto educativo e visualmente atrativo, o jogo combina conceitos de algoritmos de grafos com fases de reforço, ataque e fortificação.
+Guerra de Grafos é um jogo de estratégia baseado na teoria dos grafos, onde o jogador disputa territórios contra uma CPU. A aplicação simula batalhas, reforços e movimentações em um mapa representado por nós e arestas, com visual interativo e regras inspiradas em jogos de guerra por turnos.
 
----
 
-## 📌 O que o projeto faz
+## 📌 Objetivo
 
-O **Guerra de Grafos** simula um jogo de guerra por territórios em que o jogador humano enfrenta a IA em turnos. A cada turno, os jogadores recebem reforços, atacam territórios inimigos e movimentam tropas. A lógica do jogo é baseada em estruturas de grafos, com territórios representando nós e conexões como arestas.
+O **Guerra de Grafos** foi desenvolvido com fins educacionais e experimentais, com o objetivo de unir teoria e prática em um projeto interativo. A ideia principal foi aplicar conceitos de algoritmos e estruturas de dados, especialmente a **Teoria dos Grafos**, em um ambiente visual e dinâmico.
+
+Este projeto busca:
+
+- Explorar a **aplicação prática da Teoria dos Grafos** no contexto de jogos digitais.
+- Exercitar a **lógica de turnos** e a criação de uma **IA simples**, capaz de tomar decisões estratégicas.
+- Desenvolver uma interface web **interativa, visualmente atrativa e responsiva**, utilizando apenas HTML, CSS e JavaScript puro (sem frameworks).
+- Integrar de forma eficiente a **lógica de programação com elementos gráficos e de jogabilidade**, promovendo uma experiência fluida e educativa.
+
 
 ---
 
@@ -18,22 +26,26 @@ O **Guerra de Grafos** simula um jogo de guerra por territórios em que o jogado
 - **SVG** – Renderização das conexões (arestas) entre os territórios  
 - **Vídeo e imagens** – Para ambientação visual e regras  
 
----
+🗂️ Estrutura do Projeto
 
-## 💡 Por que foi construído
+📦 guerra-de-grafos  
+├── 📁 static  
+│   ├── 📁 css  
+│   │   └── style.css  
+│   ├── 📁 js  
+│   │   ├── main.js  
+│   │   ├── game.js  
+│   │   ├── ai.js  
+│   │   └── ui.js  
+│   └── 📁 media  
+│       ├── background.mp4  
+│       └── regras.png  
+├── 📁 templates  
+│   └── index.html  
+├── README.md  
+└── LICENSE  
 
-O **Guerra de Grafos** foi desenvolvido com fins educacionais e experimentais, com o objetivo de unir teoria e prática em um projeto interativo. A ideia principal foi aplicar conceitos de algoritmos e estruturas de dados, especialmente a **Teoria dos Grafos**, em um ambiente visual e dinâmico.
-
-Este projeto busca:
-
-- Explorar a **aplicação prática da Teoria dos Grafos** no contexto de jogos digitais.
-- Exercitar a **lógica de turnos** e a criação de uma **IA simples**, capaz de tomar decisões estratégicas.
-- Desenvolver uma interface web **interativa, visualmente atrativa e responsiva**, utilizando apenas HTML, CSS e JavaScript puro (sem frameworks).
-- Integrar de forma eficiente a **lógica de programação com elementos gráficos e de jogabilidade**, promovendo uma experiência fluida e educativa.
-
-O projeto também serve como uma base sólida para quem deseja entender como construir um jogo de estratégia a partir do zero, com foco em estruturação de código, organização de fases do jogo e tomada de decisões automatizadas.
-
----
+# 🧭 Instruções de instalação
 
 ## 📋 Pré-requisitos
 
@@ -42,14 +54,10 @@ O projeto também serve como uma base sólida para quem deseja entender como con
   - ✅ Google Chrome (recomendado)  
   - ✅ Firefox  
   - ✅ Microsoft Edge  
-  - ✅ Safari  
-- 📁 **Nenhuma instalação necessária.** Basta abrir o arquivo `index.html` com um navegador moderno.
+  - ✅ Safari
+  - 📁 **Nenhuma instalação necessária.** Basta abrir o arquivo `index.html` com um navegador moderno.
 
----
-
-# 🧭 Instruções de instalação
-
-##Siga os passos abaixo para instalar e executar o jogo Guerra de Grafos no seu computador:
+Siga os passos abaixo para instalar e executar o jogo Guerra de Grafos no seu computador:
 
 🔽 1. Faça o download ou clone o repositório
 Você pode escolher entre duas opções:
@@ -65,10 +73,7 @@ Extraia o conteúdo do arquivo .zip para uma pasta local no seu computador.
 Opção B – Clonar com Git
 Se você tiver o Git instalado, abra o terminal ou prompt de comando e digite:
 
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/guerra-de-grafos.git
+git clone (https://github.com/LucasVitta7/Guerradosgrafos.git)
 Isso criará uma cópia do projeto na pasta guerra-de-grafos.
 
 📁 2. Acesse a pasta do projeto
@@ -124,7 +129,39 @@ Veja as regras clicando em "Regras".
 
 Acompanhe as jogadas no registro de batalha.
 
-# instrocões de codigo
+## 📸 Demonstrações
+
+ 👥 Equipe
+
+| Nome | GitHub |
+|------|--------|
+|Gustavo Juliano Silva dos Santos| [@fulano](https://github.com/fulano) |
+|Eduardo Wenzel Martins de Almeida| [@ciclano](https://github.com/ciclano) |
+| Lucas Mickael da Silva Vitta| [@ciclano](https://github.com/ciclano) |
+
+🧠 Disciplinas Envolvidas
+
+Estrutura de Dados I
+Aplicação prática de listas, filas, pilhas e estruturas de grafos para organizar os territórios e suas conexões no mapa do jogo.
+
+Teoria dos Grafos
+Base fundamental do funcionamento do jogo. Cada território é um nó (vértice) e as ligações entre eles são arestas, permitindo aplicar conceitos como conectividade, vizinhança e caminhos para movimentação e combate.
+
+Linguagens Formais e Autômatos
+Utilizada na modelagem da lógica de turnos, ações do jogador e da IA como autômatos finitos, ajudando na formalização dos estados e transições entre ações dentro do jogo.
+
+🏫 Informações Acadêmicas
+
+- Universidade: **Universidade Braz Cubas**
+- Curso: Análise e Desenvolvimento de Sistemas**
+- Semestre: 3º 
+- Período: Noite
+- Professora orientadora: **Dra. Andréa Ono Sakai**
+- Evento: **Mostra de Tecnologia 1º Semestre de 2025**
+- Local: Laboratório 12
+- Datas: 05 e 06 de junho de 2025
+
+📜 Instruções de Código
 
 ## Parte referente ao html
 
@@ -140,7 +177,7 @@ Acompanhe as jogadas no registro de batalha.
 </head>
 <body>
 ```
-Define o documento como HTML5 (<!DOCTYPE html>).
+ .
 
 ```html
 <html lang="pt-BR">: Define a linguagem da página como português brasileiro.
@@ -423,7 +460,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 .turn-info { ... }: Exibe informações sobre o turno atual, centralizando e destacando visualmente essa área.
 
 ```
-11. Container do Grafo (#graph-container)
+11. 🧱 Container do Grafo (#graph-container)
 ```html
 #graph-container {
     position: relative;                         /* Permite posicionamento absoluto dos elementos filhos */
@@ -438,7 +475,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 #graph-container { ... }: Define a área onde o grafo (territórios e conexões) será renderizado.
 
 ```
-12. Camada de Arestas (#edges-layer)
+12. 🔗 Camada de Arestas (#edges-layer)
 ```html
 #edges-layer {
     position: absolute;    /* Posicionamento absoluto dentro do container */
@@ -448,7 +485,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 }
 #edges-layer { ... }: Responsável por renderizar as linhas que conectam os territórios.
 ```
-13. Estilização das Arestas (.graph-edge)
+13. ✏️ Estilização das Arestas (.graph-edge)
 ```html
 .graph-edge {
     stroke: var(--edge-color);  /* Define a cor da linha */
@@ -457,7 +494,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 .graph-edge { ... }: Aplica os estilos (cor e espessura) às linhas que representam conexões entre os territórios.
 ```
 
-14. Camada dos Nós (#nodes-layer)
+14. 🧠 Camada de Nós (#nodes-layer)
 ```html
 #nodes-layer {
     position: absolute;   /* Posicionamento absoluto para sobrepor a camada de arestas */
@@ -471,7 +508,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 
 ```
 
-15. Estilização dos Territórios
+15. 🧱 Estilização dos Territórios
 ```html
 .territory {
     position: absolute;                       /* Permite posicionamento livre dentro do container */
@@ -493,7 +530,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 .territory { ... }: Define o estilo base para os territórios exibidos no grafo.
 
 ```
-15.2. Cores de Territórios
+15.2. 🎨 Cores de Territórios
 ```html
 .territory.neutral {
     background-color: var(--neutral-color); /* Fundo para territórios neutros */
@@ -513,7 +550,7 @@ h1 { ... }: Configura a aparência do título principal do jogo.
 
 ```
 
-15.3. Território Selecionado
+15.3. ✴️ Território Selecionado
 ```html
 .territory.selected {
     border: 3px solid #FFC107; /* Borda amarela para destacar o território selecionado */
@@ -540,7 +577,7 @@ Editar
 .territory .name e .territory .armies { ... }: Estilizam os elementos internos dos territórios, como o nome e o número de exércitos.
 ```
 
-16. Painel de Controle
+16. 📊 Painel de Controle
 ```html
 .control-panel {
     background-color: var(--card-bg); /* Fundo escuro para o painel */
@@ -551,7 +588,7 @@ Editar
 .control-panel { ... }: Estiliza a área onde ficam as mensagens, log de batalhas e botões de ação.
 ```
 
-17. Caixa de Mensagens
+17. 💬 Caixa de Mensagens
 ```html
 #message-box {
     padding: 12px;                         /* Espaçamento interno */
@@ -566,7 +603,7 @@ Editar
 #message-box { ... }: Exibe mensagens para o jogador com destaque visual e espaçamento adequado.
 ```
 
-18. Log de Batalha
+18. ⚔️ Log de Batalha
 ```html
 .battle-log {
     max-height: 120px;                          /* Altura máxima para o log */
@@ -581,7 +618,7 @@ Editar
 .battle-log { ... }: Área onde são exibidas mensagens do log (por exemplo, eventos de batalha), com rolagem e estilo bem definido.
 ```
 
-19. Estilização dos Parágrafos no Log
+19. 📝 Estilização dos Parágrafos no Log
 ```html
 .battle-log p {
     margin: 5px 0;                     /* Margem vertical para espaçamento entre parágrafos */
@@ -601,7 +638,7 @@ Editar
 .action-buttons { ... }: Organiza os botões de ação, garantindo que se ajustem bem em diferentes tamanhos de tela.
 ```
 
-21. Estilização Base dos Botões (.btn)
+21. 🔘 Estilização Base dos Botões (.btn)
 ```html
 .btn {
     padding: 12px 20px;            /* Espaçamento interno */
@@ -619,7 +656,7 @@ Editar
 .btn { ... }: Define o estilo base para todos os botões, garantindo consistência e interatividade.
 ```
 
-22. Efeitos de Hover e Estados Desabilitados para Botões
+22. 🖱️ Efeitos de Hover e Estados Desabilitados para Botões
 ```html
 .btn:hover {
     transform: translateY(-2px);               /* Move o botão levemente para cima quando o mouse passa por cima */
@@ -635,7 +672,7 @@ Editar
 .btn:hover { ... } e .btn:disabled { ... }: Estabelecem os comportamentos visuais ao interagir ou quando o botão está desativado.
 ```
 
-23. Botões Específicos para Ações
+23. 🎯 Botões Específicos para Ações
 Reinforce
 ```html
 .reinforce {
