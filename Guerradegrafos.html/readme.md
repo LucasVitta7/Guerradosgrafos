@@ -11,7 +11,7 @@ O **Guerra de Grafos** foi desenvolvido com fins educacionais e experimentais, c
 Este projeto busca:
 
 - Explorar a **aplicação prática da Teoria dos Grafos** no contexto de jogos digitais.
-- Exercitar a **lógica de turnos** e a criação de uma **IA simples**, capaz de tomar decisões estratégicas.
+- Exercitar a **lógica de turnos** 
 - Desenvolver uma interface web **interativa, visualmente atrativa e responsiva**, utilizando apenas HTML, CSS e JavaScript puro (sem frameworks).
 - Integrar de forma eficiente a **lógica de programação com elementos gráficos e de jogabilidade**, promovendo uma experiência fluida e educativa.
 
@@ -89,7 +89,7 @@ Clique duas vezes sobre ele para abrir no seu navegador padrão (Chrome, Firefox
 # Jogabilidade
 
 🧩 Como o jogo funciona
-O jogo é dividido em turnos alternados entre o jogador e a IA. Cada turno é composto por 3 fases:
+O jogo é dividido em turnos alternados entre o jogador e o CPU. Cada turno é composto por 3 fases:
 
 🔶 1. Fase de Reforço
 Você recebe tropas extras com base na quantidade de territórios controlados (mínimo de 3 por turno).
@@ -103,7 +103,8 @@ Clique em um território seu com mais de 1 tropa.
 
 Depois, clique em um território inimigo vizinho para atacar.
 
-O resultado do combate é calculado automaticamente.
+O resultado do combate é sorteado por resultado dos dados.
+
 
 🛡️ 3. Fase de Fortificação
 Movimente tropas entre dois territórios seus conectados.
@@ -111,14 +112,14 @@ Movimente tropas entre dois territórios seus conectados.
 Fortifique regiões estratégicas ou prepare futuros ataques.
 
 ✅ Terminar Turno
-Clique em "Terminar Turno" para passar a vez à IA.
+Clique em "Terminar Turno" para passar a vez para CPU.
 
-A IA executará suas ações automaticamente.
+A CPU executará suas ações automaticamente.
 
 🧠 Como vencer
 Você vence ao conquistar todos os territórios.
 
-Você perde se a IA dominar todos os seus territórios.
+Você perde se a CPU dominar todos os seus territórios.
 
 🖱️ Interface e Controles
 Clique nos territórios para selecionar ações.
@@ -141,14 +142,9 @@ Acompanhe as jogadas no registro de batalha.
 
 🧠 Disciplinas Envolvidas
 
-Estrutura de Dados I
-Aplicação prática de listas, filas, pilhas e estruturas de grafos para organizar os territórios e suas conexões no mapa do jogo.
-
 Teoria dos Grafos
 Base fundamental do funcionamento do jogo. Cada território é um nó (vértice) e as ligações entre eles são arestas, permitindo aplicar conceitos como conectividade, vizinhança e caminhos para movimentação e combate.
 
-Linguagens Formais e Autômatos
-Utilizada na modelagem da lógica de turnos, ações do jogador e da IA como autômatos finitos, ajudando na formalização dos estados e transições entre ações dentro do jogo.
 
 🏫 Informações Acadêmicas
 
@@ -161,7 +157,7 @@ Utilizada na modelagem da lógica de turnos, ações do jogador e da IA como aut
 - Local: Laboratório 12
 - Datas: 05 e 06 de junho de 2025
 
-📜 Instruções de Código
+📜  explore: Instruções de Código
 
 ## Parte referente ao html
 
