@@ -4,7 +4,7 @@
     --neutral-color: #757575;
     --edge-color: #546E7A;
     --background: #121212;
-    --panel-bg: #1E1E1E;
+    --panel-bg: rgba (30, 30, 30, 0.5);
     --text-dark: #E0E0E0;
     --text-light: #FFFFFF;
     --card-bg: #2D2D2D;
@@ -28,6 +28,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    backdrop-filter: blur(15px);
     background-color: var(--panel-bg);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -309,4 +310,207 @@ h1 {
     .territory .armies {
         font-size: 14px;
     }
+}
+
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    color: white; 
+    margin: 5px; 
+}
+
+
+.btn.reinforce {
+    background-color: #4CAF50; 
+}
+
+.btn.reinforce:hover {
+    background-color: #45a049;
+}
+
+
+.btn.attack {
+    background-color: #f44336; 
+}
+
+.btn.attack:hover {
+    background-color: #da190b;
+}
+
+.btn.fortify {
+    background-color: #2196F3; 
+}
+
+.btn.fortify:hover {
+    background-color: #0b7dda;
+}
+
+.btn.end-turn {
+    background-color: #555555; 
+}
+
+.btn.end-turn:hover {
+    background-color: #333333;
+}
+
+.btn.rules {
+    background-color: #ff9800; 
+}
+
+.btn.rules:hover {
+    background-color: #e68a00;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(100, 100, 100, 0.5);
+    backdrop-filter: blur(15px);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 900px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#rules-image {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Modal de Fortificação */
+.fortify-modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Posição fixa sobre todo o viewport */
+    z-index: 101; /* Acima de outros elementos, como o modal de regras */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); /* Fundo escuro semi-transparente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    -webkit-backdrop-filter: blur(5px); /* Efeito de blur para navegadores Webkit */
+    backdrop-filter: blur(5px); /* Efeito de blur padrão */
+}
+
+.fortify-modal-content {
+    background-color: var(--card-bg); /* Cor de fundo do conteúdo do modal */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: var(--text-dark);
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* Animação de entrada */
+    border: 1px solid var(--border-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fortify-modal-content h3 {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.fortify-modal-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.fortify-modal-content input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: var(--text-light);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.fortify-modal-actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.fortify-modal-actions .btn {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.fortify-modal-actions .btn.confirm {
+    background-color: var(--player-color);
+}
+
+.fortify-modal-actions .btn.confirm:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.fortify-modal-actions .btn.cancel {
+    background-color: var(--ia-color); /* Ou uma cor neutra para cancelar */
+}
+
+.fortify-modal-actions .btn.cancel:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+}
+
+/* Ajustes para o botão "Regras" existente (se necessário, para evitar conflitos) */
+.btn.rules {
+    background-color: #ff9800; /* Pode ser a mesma cor se desejar */
+    color: white;
 }
