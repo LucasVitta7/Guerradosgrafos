@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <video src="./img/bg-video.mp4" loop autoplay muted style="position: absolute;"></video>
     <div class="game-container">
         <header>
             <h1>Guerra de Grafos</h1>
@@ -21,11 +22,7 @@
                     <span>Turno <span id="current-turn">1</span></span>
                     <span id="current-phase">Fase: Reforço</span>
                 </div>
-                <div class="stat-box ia">
-                    <span>IA</span>
-                    <span id="ia-territories">0</span> territórios
-                    <span id="ia-armies">0</span> tropas
-                </div>
+                <div class="stat-box cpu"> <span>CPU</span> <span id="cpu-territories">0</span> territórios <span id="cpu-armies">0</span> tropas </div>
             </div>
         </header>
 
@@ -43,16 +40,38 @@
                     <button id="attack-btn" class="btn attack">Atacar</button>
                     <button id="fortify-btn" class="btn fortify">Fortificar</button>
                     <button id="end-turn-btn" class="btn end-turn">Terminar Turno</button>
+                    <button id="rules-btn" class="btn rules">Regras</button>
                 </div>
             </div>
         </main>
+    </div>
+
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Regras do Jogo</h2>
+            <img id="rules-image" src="img/regras.jpg" alt="Regras do Jogo Guerra de Grafos">
+        </div>
+    </div>
+
+    <div id="fortify-modal" class="fortify-modal">
+        <div class="modal-content">
+            <h3>Mover Tropas</h3>
+            <p id="fortify-message">Quantas tropas você deseja mover de <span id="fortify-source-name"></span> para <span id="fortify-target-name"></span>?</p>
+            <p>Tropas em origem: <span id="fortify-source-armies"></span> (Máx. a mover: <span id="fortify-max-movable"></span>)</p>
+            <input type="number" id="armies-to-move-input" min="1" value="1">
+            <div class="fortify-modal-actions">
+                <button class="btn confirm" id="confirm-fortify-btn">Confirmar</button>
+                <button class="btn cancel" id="cancel-fortify-btn">Cancelar</button>
+            </div>
+        </div>
     </div>
 
     <script src="js/core/GameClass.js"></script>
     <script src="js/core/GameSetup.js"></script>
     <script src="js/core/GameUI.js"></script>
     <script src="js/core/GameActions.js"></script>
-    <script src="js/core/GameAI.js"></script>
+    <script src="js/core/GameCPU.js"></script>
     <script src="js/core/GameRules.js"></script>
     <script src="js/main.js"></script>
 </body>
