@@ -28,22 +28,7 @@ Este projeto busca:
 
 🗂️ Estrutura do Projeto
 
-📦 guerra-de-grafos  
-├── 📁 static  
-│   ├── 📁 css  
-│   │   └── style.css  
-│   ├── 📁 js  
-│   │   ├── main.js  
-│   │   ├── game.js  
-│   │   ├── ai.js  
-│   │   └── ui.js  
-│   └── 📁 media  
-│       ├── background.mp4  
-│       └── regras.png  
-├── 📁 templates  
-│   └── index.html  
-├── README.md  
-└── LICENSE  
+
 
 # 🧭 Instruções de instalação
 
@@ -104,6 +89,30 @@ Clique em um território seu com mais de 1 tropa.
 Depois, clique em um território inimigo vizinho para atacar.
 
 O resultado do combate é sorteado por resultado dos dados.
+📊 Exemplo completo
+Suponha:
+
+Atacante tem 5 tropas → pode rolar 3 dados
+
+Defensor tem 2 tropas → rola 2 dados
+
+Dados:
+
+Atacante: 6, 4, 2
+
+Defensor: 5, 3
+
+Comparações:
+
+6 vs 5 → defensor perde 1
+
+4 vs 3 → defensor perde mais 1
+
+Resultado:
+
+Defensor perde 2 tropas → 0 → território conquistado
+
+Atacante move tropas para o novo território
 
 
 🛡️ 3. Fase de Fortificação
