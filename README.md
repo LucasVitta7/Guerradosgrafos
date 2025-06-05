@@ -22,7 +22,7 @@ Este projeto busca:
 
 - **HTML5** – Estrutura da interface do jogo  
 - **CSS3** – Estilização e layout responsivo  
-- **JavaScript (Vanilla)** – Lógica do jogo, IA, regras e controle de turno  
+- **JavaScript (Vanilla)** – Lógica do jogo, Maquina, regras e controle de turno  
 - **SVG** – Renderização das conexões (arestas) entre os territórios  
 - **Vídeo e imagens** – Para ambientação visual e regras  
 
